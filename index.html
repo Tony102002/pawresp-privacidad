@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad — PawResp</title>
+<style>
+  :root{
+    --verde:#2E9E5E; --verde-osc:#1B7A42; --texto:#1A1A2E;
+    --gris:#5a6472; --linea:#e3e7ea; --fondo:#ffffff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--fondo); color:var(--texto);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; font-size:16px;
+  }
+  .cab{background:linear-gradient(135deg,var(--verde-osc),var(--verde));color:#fff;padding:40px 20px 34px}
+  .caja{max-width:760px;margin:0 auto;padding:0 20px}
+  .cab h1{margin:0 0 6px;font-size:28px;letter-spacing:-.3px}
+  .cab p{margin:0;opacity:.9;font-size:15px}
+  main{padding:34px 0 60px}
+  h2{font-size:19px;margin:34px 0 10px;color:var(--verde-osc);
+     border-bottom:1px solid var(--linea);padding-bottom:7px}
+  h3{font-size:16px;margin:22px 0 6px}
+  p,li{color:var(--gris)}
+  li{margin-bottom:7px}
+  strong{color:var(--texto)}
+  a{color:var(--verde)}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+  th,td{text-align:left;padding:10px 12px;border:1px solid var(--linea);vertical-align:top}
+  th{background:#f6f8f7;color:var(--texto);font-weight:600}
+  .aviso{background:#f1f8f4;border-left:4px solid var(--verde);
+         padding:14px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+  .aviso p{margin:0;color:var(--texto)}
+  footer{border-top:1px solid var(--linea);margin-top:40px;padding-top:18px;
+         font-size:13.5px;color:var(--gris)}
+  @media(max-width:520px){ .cab h1{font-size:23px} body{font-size:15.5px} }
+</style>
+</head>
+<body>
+
+<div class="cab">
+  <div class="caja">
+    <h1>Política de Privacidad</h1>
+    <p>PawResp · Última actualización: 17 de octubre de 2026</p>
+  </div>
+</div>
+
+<main class="caja">
+
+<p>Esta política explica qué datos recopila la aplicación móvil <strong>PawResp</strong>, para qué
+se usan, dónde se guardan y con quién se comparten. Aplica únicamente a la aplicación PawResp
+y al collar que la acompaña.</p>
+
+<p>PawResp es un proyecto académico desarrollado en la carrera de Ingeniería de Sistemas de
+Información de la Universidad Peruana de Ciencias Aplicadas (UPC), orientado a la detección
+temprana de problemas respiratorios en perros braquicéfalos.</p>
+
+<h2>1. Qué datos recopilamos</h2>
+
+<h3>Datos de tu cuenta</h3>
+<ul>
+  <li><strong>Correo electrónico y contraseña.</strong> Son necesarios para crear tu cuenta e
+  iniciar sesión. La contraseña la gestiona el servicio de autenticación de Supabase: se guarda
+  cifrada y ni nosotros ni la aplicación podemos leerla.</li>
+  <li><strong>Nombre.</strong> El que indicas al registrarte, para personalizar la aplicación.</li>
+</ul>
+
+<h3>Datos de tu mascota</h3>
+<ul>
+  <li>Nombre, raza, edad, peso, sexo y si pertenece a una raza braquicéfala.</li>
+  <li>Una fotografía, <strong>solo si decides agregarla</strong>.</li>
+</ul>
+
+<h3>Datos que envía el collar</h3>
+<ul>
+  <li>Temperatura corporal, frecuencia cardíaca, saturación de oxígeno (SpO₂) y nivel de
+  actividad de tu mascota, con su fecha y hora.</li>
+  <li>El resultado del análisis de esas lecturas y las alertas que se generan a partir de ellas.</li>
+</ul>
+
+<div class="aviso">
+  <p><strong>No recopilamos datos de salud de personas.</strong> Todos los signos vitales que
+  registra PawResp pertenecen a la mascota, nunca al usuario.</p>
+</div>
+
+<h2>2. Permisos que solicita la aplicación</h2>
+
+<table>
+  <tr><th>Permiso</th><th>Para qué se usa</th></tr>
+  <tr>
+    <td><strong>Bluetooth</strong><br>(buscar y conectar)</td>
+    <td>Encontrar el collar PawResp cercano, enlazarlo y recibir las lecturas de los sensores.
+    Es imprescindible para que la aplicación funcione.</td>
+  </tr>
+  <tr>
+    <td><strong>Ubicación</strong><br>(aproximada y precisa)</td>
+    <td>El sistema Android exige este permiso para poder buscar dispositivos Bluetooth cercanos
+    en las versiones de Android 11 y anteriores. <strong>PawResp no recopila, no guarda y no
+    comparte la ubicación de tu dispositivo</strong>; el permiso se utiliza exclusivamente para
+    el rastreo de Bluetooth.</td>
+  </tr>
+  <tr>
+    <td><strong>Cámara y fotos</strong></td>
+    <td>Solo se solicita en el momento en que eliges tomar o seleccionar una foto de tu mascota.
+    Si no agregas una foto, nunca se accede a tu galería ni a tu cámara.</td>
+  </tr>
+  <tr>
+    <td><strong>Internet</strong></td>
+    <td>Sincronizar tu cuenta, el perfil de tu mascota y el historial de lecturas con el
+    servidor.</td>
+  </tr>
+</table>
+
+<h2>3. Para qué usamos los datos</h2>
+<ul>
+  <li>Mostrarte los signos vitales de tu mascota en tiempo real y su historial.</li>
+  <li>Detectar patrones compatibles con dificultad respiratoria y generar alertas.</li>
+  <li>Ofrecerte recomendaciones de cuidado asociadas a esas alertas.</li>
+  <li>Mantener tu sesión iniciada y asociar la información a tu cuenta.</li>
+</ul>
+
+<p>No usamos tus datos con fines publicitarios, no los vendemos ni los alquilamos, y no
+construimos perfiles comerciales a partir de ellos.</p>
+
+<h2>4. El análisis se hace en tu teléfono</h2>
+
+<p>El modelo de aprendizaje automático que evalúa las lecturas está integrado en la propia
+aplicación y se ejecuta <strong>dentro de tu dispositivo</strong>. Los signos vitales de tu
+mascota no se envían a ningún servicio externo de inteligencia artificial para ser analizados.</p>
+
+<h2>5. Dónde se guardan y con quién se comparten</h2>
+
+<p>La información se almacena en los servicios de <strong>Supabase Inc.</strong>, el proveedor
+que utilizamos para la base de datos, la autenticación de cuentas y el almacenamiento de las
+fotografías. Puedes consultar su política de privacidad en
+<a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.</p>
+
+<p>La aplicación también descarga tipografías desde <strong>Google Fonts</strong> para mostrar
+sus textos. Esa solicitud implica que Google recibe la dirección IP del dispositivo, como en
+cualquier visita a una página web. Su política está en
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+<p>Fuera de estos dos proveedores, <strong>no compartimos tus datos con terceros</strong>.
+La única excepción sería un requerimiento legal de una autoridad competente.</p>
+
+<p>PawResp no incluye publicidad ni herramientas de analítica o seguimiento de terceros.</p>
+
+<h2>6. Cuánto tiempo conservamos los datos</h2>
+
+<p>Los datos de tu cuenta, de tu mascota y su historial de lecturas se conservan mientras
+mantengas la cuenta activa. Si solicitas su eliminación, se borran de forma permanente.</p>
+
+<h2>7. Eliminar tu cuenta y tus datos</h2>
+
+<p>Puedes pedir en cualquier momento que eliminemos tu cuenta junto con toda la información
+asociada: tu perfil, los datos de tu mascota, su fotografía, el historial de lecturas y las
+alertas generadas.</p>
+
+<p>Escríbenos a <strong>jupz150@gmail.com</strong> desde el correo con el que te registraste,
+indicando que deseas eliminar tu cuenta. Atenderemos la solicitud en un plazo máximo de
+<strong>30 días</strong> y te confirmaremos cuando esté hecho.</p>
+
+<h2>8. Tus derechos</h2>
+<ul>
+  <li>Acceder a los datos que tenemos sobre ti y tu mascota.</li>
+  <li>Corregirlos si son inexactos (buena parte puedes editarla desde la propia aplicación).</li>
+  <li>Solicitar su eliminación.</li>
+  <li>Retirar tu consentimiento dejando de usar la aplicación y pidiendo el borrado de la cuenta.</li>
+</ul>
+
+<p>Para ejercer cualquiera de ellos, escríbenos al correo indicado más abajo.</p>
+
+<h2>9. Seguridad</h2>
+
+<p>La comunicación entre la aplicación y el servidor viaja cifrada mediante HTTPS. El acceso a
+la información está restringido a la cuenta que la creó: un usuario no puede consultar los datos
+ni las mascotas de otro.</p>
+
+<p>Ningún sistema es completamente infalible, pero aplicamos medidas razonables para proteger
+la información que nos confías.</p>
+
+<h2>10. Menores de edad</h2>
+
+<p>PawResp no está dirigida a menores de 13 años y no recopilamos de forma consciente datos
+personales de menores de esa edad. Si detectamos que se creó una cuenta en esas condiciones,
+la eliminaremos.</p>
+
+<h2>11. Cambios en esta política</h2>
+
+<p>Si modificamos esta política, actualizaremos la fecha que aparece al inicio de la página y
+publicaremos la nueva versión en esta misma dirección. Te recomendamos revisarla de vez en
+cuando.</p>
+
+<h2>12. Contacto</h2>
+
+<p>Para cualquier duda sobre esta política o sobre el tratamiento de tus datos:</p>
+<p><strong>Correo:</strong> jupz150@gmail.com<br>
+<strong>Aplicación:</strong> PawResp</p>
+
+<footer>
+  PawResp — Proyecto académico de la Universidad Peruana de Ciencias Aplicadas (UPC), Lima, Perú.<br>
+  PawResp es una herramienta de monitoreo y prevención. No diagnostica enfermedades ni
+  sustituye la evaluación de un médico veterinario.
+</footer>
+
+</main>
+</body>
+</html>
