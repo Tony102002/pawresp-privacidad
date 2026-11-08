@@ -5,147 +5,430 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Eliminar tu cuenta — PawResp</title>
 <style>
-  :root{
-    --verde:#2E9E5E; --verde-osc:#1B7A42; --texto:#1A1A2E;
-    --gris:#5a6472; --linea:#e3e7ea; --fondo:#ffffff; --rojo:#c0392b;
+  :root {
+    --verde: #2E9E5E;
+    --verde-osc: #1B7A42;
+    --texto: #1A1A2E;
+    --gris: #5a6472;
+    --linea: #e3e7ea;
+    --fondo: #ffffff;
   }
-  *{box-sizing:border-box}
-  body{
-    margin:0; background:var(--fondo); color:var(--texto);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.65; font-size:16px;
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    font-size: 16px;
   }
-  .cab{background:linear-gradient(135deg,var(--verde-osc),var(--verde));color:#fff;padding:40px 20px 34px}
-  .caja{max-width:760px;margin:0 auto;padding:0 20px}
-  .cab h1{margin:0 0 6px;font-size:28px;letter-spacing:-.3px}
-  .cab p{margin:0;opacity:.9;font-size:15px}
-  main{padding:34px 0 60px}
-  h2{font-size:19px;margin:34px 0 10px;color:var(--verde-osc);
-     border-bottom:1px solid var(--linea);padding-bottom:7px}
-  p,li{color:var(--gris)}
-  li{margin-bottom:7px}
-  strong{color:var(--texto)}
-  a{color:var(--verde)}
-  ol.pasos{counter-reset:p;list-style:none;padding:0;margin:18px 0}
-  ol.pasos li{counter-increment:p;position:relative;padding:0 0 18px 48px;margin:0}
-  ol.pasos li::before{
-    content:counter(p);position:absolute;left:0;top:0;
-    width:32px;height:32px;border-radius:50%;
-    background:var(--verde);color:#fff;font-weight:700;font-size:15px;
-    display:flex;align-items:center;justify-content:center;
+
+  .cab {
+    background: linear-gradient(135deg, var(--verde-osc), var(--verde));
+    color: #fff;
+    padding: 40px 20px 34px;
   }
-  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
-  th,td{text-align:left;padding:10px 12px;border:1px solid var(--linea);vertical-align:top}
-  th{background:#f6f8f7;color:var(--texto);font-weight:600}
-  .aviso{background:#f1f8f4;border-left:4px solid var(--verde);
-         padding:14px 16px;border-radius:0 8px 8px 0;margin:18px 0}
-  .aviso p{margin:0;color:var(--texto)}
-  .correo{display:inline-block;background:#f6f8f7;border:1px solid var(--linea);
-          border-radius:8px;padding:8px 14px;font-weight:600;color:var(--texto);
-          margin:6px 0}
-  footer{border-top:1px solid var(--linea);margin-top:40px;padding-top:18px;
-         font-size:13.5px;color:var(--gris)}
-  @media(max-width:520px){ .cab h1{font-size:23px} body{font-size:15.5px} }
+
+  .caja {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .cab h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    letter-spacing: -.3px;
+  }
+
+  .cab p {
+    margin: 0;
+    color: #fff;
+    opacity: .9;
+    font-size: 15px;
+  }
+
+  main.caja { padding-top: 34px; padding-bottom: 60px; }
+
+  h2 {
+    font-size: 19px;
+    margin: 34px 0 10px;
+    color: var(--verde-osc);
+    border-bottom: 1px solid var(--linea);
+    padding-bottom: 7px;
+  }
+
+  p, li { color: var(--gris); }
+  li { margin-bottom: 7px; }
+  strong { color: var(--texto); }
+  a { color: var(--verde-osc); }
+
+  ol.pasos {
+    counter-reset: p;
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+  }
+
+  ol.pasos li {
+    counter-increment: p;
+    position: relative;
+    padding: 0 0 18px 48px;
+    margin: 0;
+  }
+
+  ol.pasos li::before {
+    content: counter(p);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--verde-osc);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14.5px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border: 1px solid var(--linea);
+    vertical-align: top;
+  }
+
+  th {
+    background: #f6f8f7;
+    color: var(--texto);
+    font-weight: 600;
+  }
+
+  .aviso {
+    background: #f1f8f4;
+    border-left: 4px solid var(--verde);
+    padding: 14px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 18px 0;
+  }
+
+  .aviso p { margin: 0; color: var(--texto); }
+
+  .correo {
+    display: inline-block;
+    background: #f6f8f7;
+    border: 1px solid var(--linea);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-weight: 600;
+    color: var(--texto);
+    margin: 6px 0;
+    overflow-wrap: anywhere;
+  }
+
+  .solicitud {
+    margin-top: 32px;
+    padding: 20px;
+    border: 1px solid var(--linea);
+    border-radius: 12px;
+    background: #f6f8f7;
+  }
+
+  .solicitud h2 { margin-top: 0; }
+
+  .boton-solicitud {
+    display: inline-block;
+    background: var(--verde-osc);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .boton-solicitud:hover { background: #145e32; }
+
+  a:focus-visible, summary:focus-visible {
+    outline: 3px solid var(--texto);
+    outline-offset: 4px;
+  }
+
+  .nota-solicitud { font-size: 14px; }
+
+  summary {
+    cursor: pointer;
+    color: var(--verde-osc);
+    font-weight: 600;
+  }
+
+  footer {
+    border-top: 1px solid var(--linea);
+    margin-top: 40px;
+    padding-top: 18px;
+    font-size: 13.5px;
+    color: var(--gris);
+  }
+
+  @media (max-width: 520px) {
+    .cab h1 { font-size: 23px; }
+    body { font-size: 15.5px; }
+    .boton-solicitud { display: block; width: 100%; }
+    .solicitud { padding: 16px; }
+  }
 </style>
 </head>
 <body>
 
-<div class="cab">
+<header class="cab">
   <div class="caja">
     <h1>Eliminar tu cuenta</h1>
-    <p>PawResp · Última actualización: 17 de octubre de 2026</p>
+    <p>PawResp · Última actualización: 7 de noviembre de 2026</p>
   </div>
-</div>
+</header>
 
 <main class="caja">
 
-<p>Esta página explica cómo solicitar la eliminación de tu cuenta de la aplicación
-<strong>PawResp</strong> y de todos los datos asociados a ella.</p>
+  <p>
+    Esta página explica cómo solicitar la eliminación de tu cuenta
+    de la aplicación <strong>PawResp</strong> y de todos los datos
+    asociados a ella.
+  </p>
 
-<h2>Cómo solicitar la eliminación</h2>
+  <h2>Cómo solicitar la eliminación</h2>
 
-<ol class="pasos">
-  <li>Escribe un correo a la dirección de soporte de PawResp:<br>
-  <span class="correo">jupz150@gmail.com</span></li>
+  <ol class="pasos">
+    <li>
+      Utiliza el botón
+      <a href="#solicitud-titulo">«Solicitar eliminación de mi cuenta»</a>
+      al final de esta página o escribe directamente a:<br>
+      <span class="correo">jupz150@gmail.com</span>
+    </li>
 
-  <li>Envíalo <strong>desde la misma dirección de correo con la que te registraste</strong>
-  en la aplicación. Así podemos verificar que la cuenta es tuya.</li>
+    <li>
+      Envía la solicitud
+      <strong>desde la misma dirección de correo con la que te registraste</strong>
+      en la aplicación. Así podemos verificar que la cuenta es tuya.
+    </li>
 
-  <li>Escribe en el asunto: <strong>Eliminar mi cuenta de PawResp</strong>.</li>
+    <li>
+      Escribe en el asunto:
+      <strong>Eliminar mi cuenta de PawResp</strong>.
+      Si utilizas el botón, el asunto y el mensaje estarán preparados.
+    </li>
 
-  <li>Recibirás una confirmación cuando el borrado esté completo. El plazo máximo es de
-  <strong>30 días</strong> desde que recibimos tu solicitud.</li>
-</ol>
+    <li>
+      Recibirás una confirmación cuando el borrado esté completo.
+      El plazo máximo es de <strong>30 días</strong> desde que
+      recibimos tu solicitud.
+    </li>
+  </ol>
 
-<div class="aviso">
-  <p>No necesitas dar explicaciones ni completar ningún formulario. Basta con el correo.</p>
-</div>
+  <div class="aviso">
+    <p>
+      No necesitas dar explicaciones ni completar ningún formulario.
+      Basta con enviar el correo.
+    </p>
+  </div>
 
-<h2>Qué datos se eliminan</h2>
+  <h2>Qué datos se eliminan</h2>
 
-<p>Al eliminar tu cuenta se borra de forma permanente toda la información siguiente:</p>
+  <p>
+    Al eliminar tu cuenta se borra de forma permanente toda
+    la información siguiente:
+  </p>
 
-<table>
-  <tr><th>Tipo de dato</th><th>Qué incluye</th></tr>
-  <tr>
-    <td><strong>Datos de tu cuenta</strong></td>
-    <td>Tu dirección de correo electrónico, tu nombre y tus credenciales de acceso.</td>
-  </tr>
-  <tr>
-    <td><strong>Perfil de tu mascota</strong></td>
-    <td>Nombre, raza, edad, peso, sexo, condición braquicéfala y la fotografía, si
-    agregaste una.</td>
-  </tr>
-  <tr>
-    <td><strong>Historial de lecturas</strong></td>
-    <td>Todos los registros de temperatura corporal, frecuencia cardíaca, saturación de
-    oxígeno (SpO₂) y nivel de actividad recogidos por el collar, con sus fechas y horas.</td>
-  </tr>
-  <tr>
-    <td><strong>Análisis y alertas</strong></td>
-    <td>Los resultados del análisis de las lecturas y todas las alertas generadas a partir
-    de ellas.</td>
-  </tr>
-  <tr>
-    <td><strong>Vinculación del collar</strong></td>
-    <td>El registro que asocia tu collar con tu mascota.</td>
-  </tr>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Tipo de dato</th>
+        <th scope="col">Qué incluye</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Datos de tu cuenta</strong></td>
+        <td>
+          Tu dirección de correo electrónico, tu nombre y tus
+          credenciales de acceso.
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Perfil de tu mascota</strong></td>
+        <td>
+          Nombre, raza, edad, peso, sexo, condición braquicéfala
+          y la fotografía, si agregaste una.
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Historial de lecturas</strong></td>
+        <td>
+          Todos los registros de temperatura corporal, frecuencia
+          cardíaca, saturación de oxígeno (SpO₂) y nivel de actividad
+          recogidos por el collar, con sus fechas y horas.
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Análisis y alertas</strong></td>
+        <td>
+          Los resultados del análisis de las lecturas y todas
+          las alertas generadas a partir de ellas.
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Vinculación del collar</strong></td>
+        <td>El registro que asocia tu collar con tu mascota.</td>
+      </tr>
+    </tbody>
+  </table>
 
-<h2>Qué datos se conservan y por cuánto tiempo</h2>
+  <h2>Qué datos se conservan y por cuánto tiempo</h2>
 
-<p>No conservamos ninguna información tuya después del borrado. La única excepción son las
-<strong>copias de seguridad automáticas</strong> de nuestro proveedor de base de datos, que se
-sobrescriben solas en un plazo máximo de <strong>30 días adicionales</strong>. Esas copias no
-se consultan ni se utilizan para nada; simplemente caducan.</p>
+  <p>
+    No conservamos ninguna información tuya después del borrado.
+    La única excepción son las
+    <strong>copias de seguridad automáticas</strong> de nuestro
+    proveedor de base de datos, que se sobrescriben solas en un
+    plazo máximo de <strong>30 días adicionales</strong>.
+    Esas copias no se consultan ni se utilizan para nada;
+    simplemente caducan.
+  </p>
 
-<p>Pasado ese plazo, no queda ningún dato tuyo ni de tu mascota en nuestros sistemas.</p>
+  <p>
+    Pasado ese plazo, no queda ningún dato tuyo ni de tu mascota
+    en nuestros sistemas.
+  </p>
 
-<h2>Importante antes de solicitarlo</h2>
+  <h2>Importante antes de solicitarlo</h2>
 
-<ul>
-  <li>La eliminación es <strong>permanente y no se puede deshacer</strong>.</li>
-  <li>Se pierde todo el historial de salud de tu mascota. Si quieres conservarlo, guárdalo
-  o muéstraselo a tu veterinario antes de pedir el borrado.</li>
-  <li>Si más adelante quieres volver a usar PawResp, tendrás que crear una cuenta nueva
-  desde cero.</li>
-</ul>
+  <ul>
+    <li>
+      La eliminación es
+      <strong>permanente y no se puede deshacer</strong>.
+    </li>
+    <li>
+      Se pierde todo el historial de salud de tu mascota.
+      Si quieres conservarlo, guárdalo o muéstraselo a tu
+      veterinario antes de pedir el borrado.
+    </li>
+    <li>
+      Si más adelante quieres volver a usar PawResp, tendrás
+      que crear una cuenta nueva desde cero.
+    </li>
+  </ul>
 
-<h2>Dudas</h2>
+  <h2>Dudas</h2>
 
-<p>Si tienes cualquier pregunta sobre este proceso, escríbenos a
-<strong>jupz150@gmail.com</strong>.</p>
+  <p>
+    Si tienes cualquier pregunta sobre este proceso, escríbenos a
+    <a href="mailto:jupz150@gmail.com">jupz150@gmail.com</a>.
+  </p>
 
-<p>Puedes consultar también nuestra
-<a href="./">política de privacidad</a>, donde se detalla qué datos recopila la aplicación
-y cómo se usan.</p>
+  <p>
+    Puedes consultar también nuestra
+    <a href="./">política de privacidad</a>, donde se detalla
+    qué datos recopila la aplicación y cómo se usan.
+  </p>
 
-<footer>
-  PawResp — Proyecto académico de la Universidad Peruana de Ciencias Aplicadas (UPC),
-  Lima, Perú.<br>
-  Desarrollador de la aplicación PawResp en Google Play.
-</footer>
+  <section class="solicitud" aria-labelledby="solicitud-titulo">
+    <h2 id="solicitud-titulo">
+      Solicitar la eliminación de mi cuenta
+    </h2>
+
+    <p>
+      Pulsa el siguiente botón para abrir tu aplicación de correo
+      con el destinatario, el asunto y el mensaje preparados.
+    </p>
+
+    <p>
+      <strong>
+        Antes de enviarlo, verifica que uses el mismo correo
+        con el que te registraste en PawResp.
+      </strong>
+      Luego pulsa «Enviar» en tu aplicación de correo.
+    </p>
+
+    <a
+      id="solicitar-eliminacion"
+      class="boton-solicitud"
+      href="mailto:jupz150@gmail.com?subject=Eliminar%20mi%20cuenta%20de%20PawResp&amp;body=Solicito%20la%20eliminaci%C3%B3n%20permanente%20de%20mi%20cuenta%20de%20PawResp%20y%20de%20los%20datos%20asociados."
+    >
+      Solicitar eliminación de mi cuenta
+    </a>
+
+    <p class="nota-solicitud">
+      Pulsar este botón no envía la solicitud ni elimina tu cuenta
+      automáticamente. La solicitud se envía cuando confirmas
+      el envío en tu aplicación de correo.
+    </p>
+
+    <details>
+      <summary>¿No se abre tu correo?</summary>
+
+      <p>
+        Abre Gmail o tu servicio de correo y escribe a
+        <strong>jupz150@gmail.com</strong> desde la dirección
+        con la que te registraste.
+      </p>
+
+      <p>
+        <strong>Asunto:</strong> Eliminar mi cuenta de PawResp
+      </p>
+
+      <p>
+        <strong>Mensaje:</strong>
+        Solicito la eliminación permanente de mi cuenta de PawResp
+        y de los datos asociados a ella. Entiendo que perderé el
+        historial y los datos de mi mascota. Por favor, confirmen
+        cuando el proceso haya finalizado.
+      </p>
+    </details>
+  </section>
+
+  <footer>
+    PawResp — Proyecto académico de la Universidad Peruana de
+    Ciencias Aplicadas (UPC), Lima, Perú.<br>
+    Desarrollador de la aplicación PawResp en Google Play.
+  </footer>
 
 </main>
+
+<script>
+  const destinatario = "jupz150@gmail.com";
+  const asunto = "Eliminar mi cuenta de PawResp";
+
+  const mensaje = [
+    "Hola, equipo de PawResp:",
+    "",
+    "Solicito la eliminación permanente de mi cuenta y de los datos asociados a ella.",
+    "",
+    "Envío esta solicitud desde el correo con el que me registré en la aplicación.",
+    "",
+    "Entiendo que la eliminación es permanente y que perderé el historial y los datos de mi mascota.",
+    "",
+    "Por favor, confirmen cuando el proceso haya finalizado.",
+    "",
+    "Gracias."
+  ].join("\r\n");
+
+  document.getElementById("solicitar-eliminacion").href =
+    "mailto:" + destinatario +
+    "?subject=" + encodeURIComponent(asunto) +
+    "&body=" + encodeURIComponent(mensaje);
+</script>
+
 </body>
 </html>
